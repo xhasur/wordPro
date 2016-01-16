@@ -20,31 +20,22 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-
-
-$url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
-
-
-/** The name of the database for WordPress */
-define('DB_NAME', trim($url['path'], '/'));
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define('DB_USER', $url['user']);
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', $url['pass']);
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', $url['host']);
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
-
-
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -55,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'getenv(AUTH_KEY)');
-define('SECURE_AUTH_KEY',  'getenv(SECURE_AUTH_KEY)');
-define('LOGGED_IN_KEY',    'getenv(LOGGED_IN_KEY)');
-define('NONCE_KEY',        'getenv(NONCE_KEY)');
-define('AUTH_SALT',        'getenv(AUTH_SALT)');
-define('SECURE_AUTH_SALT', 'getenv(SECURE_AUTH_SALT)');
-define('LOGGED_IN_SALT',   'getenv(LOGGED_IN_SALT)');
-define('NONCE_SALT',       'getenv(NONCE_SALT)');
+define('AUTH_KEY',         'v/mF{?kZe2jGQH<X|aM$QO9be`?rBl/2Utf*^yW}^7+J;qHV&;-dHa,7_kn{5>S=');
+define('SECURE_AUTH_KEY',  '&GS/:Y.m$ku#Wm42O3[@ES|+bx}q9)biIETl6?C0>+-%|W|#z=ObcWF9V`yW+[w:');
+define('LOGGED_IN_KEY',    'Ghg+-*~wa RWWqugf}WwWFgCOqgvc582 =3%8}P^@ebAtj6XIV3 #c1iR99>x{5o');
+define('NONCE_KEY',        '|$7lDHZ5 n:NgQN`OLYOcN>$p{f-vF6~A`2+1:|uAi V5PQ@*>n{+*732E~S0u:4');
+define('AUTH_SALT',        ';tJ%q`Y./y-!j86.;_d}>/4#;48$|Sbp$p3 UlT-IRhd!)Bv1qw E-O0tbnpJu=2');
+define('SECURE_AUTH_SALT', 's=Yp$m}Axx!Wm]=Ic=_U:Aqf$7Rfenc|wO~@8[vBb@qkO+<9L}r7:nXjqQw6-yxP');
+define('LOGGED_IN_SALT',   '$bLcI?W?3Bo1Tz(Q5qvUR yEGJ.+g{.hd7G*Z<:I%L4mnHvd1O_.WV>3B8 ZCE$<');
+define('NONCE_SALT',       '?1Xh-Ee:r7uxG6!(a2,h,7NGafW|UtagW6bFYa[olrGM|tm}^aDwNW-PRs2q&K6m');
 
 /**#@-*/
 
@@ -72,7 +63,7 @@ define('NONCE_SALT',       'getenv(NONCE_SALT)');
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'wps_';
 
 /**
  * For developers: WordPress debugging mode.
